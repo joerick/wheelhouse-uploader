@@ -114,6 +114,8 @@ def handle_upload(options):
                 print("Failed to enable CDN: %s %s" % (type(e).__name__, e))
     except InvalidCredsError:
         print("Invalid credentials for user '%s'" % options.username)
+        import traceback
+        traceback.print_exc()
         sys.exit(1)
 
 
